@@ -20,6 +20,7 @@ module.exports = class Game {
     movement(player, x, y, callback){
         if (this.player !== player) return callback({msg: 'Não é turno do jogador'});
 
+        // Bitwise XOR
         x = x !== 1 ? x ^ 2 : x;
         y = y !== 1 ? y ^ 2 : y;
 
@@ -39,6 +40,7 @@ module.exports = class Game {
      */
     evaluate(callback){
         if(this.diagonal() || this.column() || this.row()){
+            this.player = this.player === 'X' ? 'O' : 'X';
             this.winner = this.player;
             return callback(null, {msg: 'Partida Finalizada', winner: this.player});
         }else if (this.round === 9) {
