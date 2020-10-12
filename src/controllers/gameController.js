@@ -14,7 +14,6 @@ exports.game = (_req, res) => {
 
     cache.set(id, new Game(id, symbol), err => {
         if (err) return res.status(500).json({ msg: err });
-
         res.json({ id, firstPlayer: symbol });
     });
 };
