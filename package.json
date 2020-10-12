@@ -1,9 +1,10 @@
 {
   "name": "ttt-dti",
   "version": "1.0.0",
-  "description": "API de Jogo da Velha Multiplayer",
+  "description": "API de Jogo da Velha Multiplayer em Node.Js",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Diego Silveira <diego.almeida@outlook.com>",
@@ -11,5 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
   }
 }
